@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <form [formGroup]="formDialog" (ngSubmit)="OnSubmit()">
+        <div class="modal-header">
+            <h4 class="modal-title">Tipo Documento de Identidad</h4>
+            <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Código Sunat</label>
+                        <input type="text" formControlName="codigoSunat" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Descripción</label>
+                        <input type="text" formControlName="descripcion" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Abreviatura</label>
+                        <input type="text" formControlName="abreviatura" class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary btn-margin">Guardar</button>
+            <button type="button" class="btn btn-secondary" (click)="activeModal.close('Close click')">Cancelar</button>
+        </div>
+
+
+
+    </form>
+
+</div>

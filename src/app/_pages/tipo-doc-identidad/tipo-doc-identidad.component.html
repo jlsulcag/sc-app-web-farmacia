@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" (click)="openDialogCreate()">Nuevo</button>
+
+    <table class="table table-sm">
+        <thead class="thead-dark">
+            <th scope="col">Id</th>
+            <th scope="col">Código Sunat</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Sigla</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of listDocs">
+                <th scope="row">{{data.id}}</th>
+                <td>{{data.codigoSunat}}</td>
+                <td>{{data.descripcion}}</td>
+                <td>{{data.abreviatura}}</td>
+                <td><button class="btn btn-warning" (click)="Editar(data)">Editar</button></td>
+                <td><button class="btn btn-danger" (click)="Eliminar(data)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <ngb-alert>
+            This alert's type is success and it's not dismissible because the config has been customized
+        </ngb-alert>
+    </p>
+
+
+</div>
